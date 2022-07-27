@@ -111,4 +111,16 @@ public class Helper {
 			System.out.println(list.get(id));
 		}
 	}
+	// DELETE METHOD
+	public void deleteRecord()
+	{
+		int id;
+		for(Person p1: list) {
+			System.out.println("ID: #"+list.indexOf(p1)+" : "+p1);
+			
+		}
+		System.out.println("\nEnter #ID to delete contact : ");
+		id = InputUtil.getIntValue();
+		list.remove(id);
+	}
 }
