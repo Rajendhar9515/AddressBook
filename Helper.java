@@ -123,4 +123,17 @@ public class Helper {
 		id = InputUtil.getIntValue();
 		list.remove(id);
 	}
+	public boolean checkExists(String firstName) {
+		int flag = 0;
+		for (Person p1 : list) {
+			if (p1.getFirstName().equals(firstName)) {
+				flag = 1;
+				break;
+			}
+		}
+		if (flag == 1) {
+			return true;
+		}
+		return false;
+	}
 }
