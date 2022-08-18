@@ -111,7 +111,6 @@ public class Helper {
 			System.out.println(list.get(id));
 		}
 	}
-	// DELETE METHOD
 	public void deleteRecord()
 	{
 		int id;
@@ -123,17 +122,27 @@ public class Helper {
 		id = InputUtil.getIntValue();
 		list.remove(id);
 	}
-	public boolean checkExists(String firstName) {
-		int flag = 0;
-		for (Person p1 : list) {
-			if (p1.getFirstName().equals(firstName)) {
-				flag = 1;
-				break;
-			}
-		}
-		if (flag == 1) {
-			return true;
-		}
-		return false;
-	}
+	 public void sortRecords()
+	    {
+	        Sort.sortByName(list);
+	    }
+
+//	    this function will check for duplicate users
+	    public boolean checkExists(String firstname)
+	    {
+	        int flag=0;
+	        for (Person p: list)
+	        {
+	            if (p.getFirstName().equals(firstname))
+	            {
+	                flag=1;
+	                break;
+	            }
+	        }
+	        if (flag==1)
+	        {
+	            return true;
+	        }
+	        return false;
+	    }
 }

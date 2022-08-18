@@ -1,8 +1,11 @@
 package com.bridgelabz.addressbook;
 
+import java.util.Hashtable;
+
 public class AddressBook {
     public static void main(String[] args) {
         int choice,i=0;
+        Hashtable<String,String> my_dict =new  Hashtable<String,String>();
         final Helper help = new Helper();
         while(i==0)
         {
@@ -13,7 +16,7 @@ public class AddressBook {
             System.out.println("3: Edit Contact		   ");
             System.out.println("4: Delete Contact	   ");
             System.out.println("5: Exit		       \n");
-	    System.out.println(" -----------------------");
+			System.out.println(" -----------------------");
             System.out.println("--- Enter Your Choice ---");
             choice = InputUtil.getIntValue();
             switch(choice)
@@ -25,12 +28,15 @@ public class AddressBook {
                     help.displayRecord();
                     break;
                 case 3 :
-    		        help.editRecord();
-    		    	  break;
+    				help.editRecord();
+    				break;
                 case 4:
-    		        help.deleteRecord();
-    		        break;
+    				help.deleteRecord();
+    				break;
                 case 5 :
+                    help.sortRecords();
+                    break;
+                case 6 :
                     i=1;
                     break;
                 default :

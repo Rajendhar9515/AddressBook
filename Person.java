@@ -1,5 +1,7 @@
 package com.bridgelabz.addressbook;
 
+import java.util.Comparator;
+
 public class Person {
 
 	private String firstName;
@@ -87,6 +89,15 @@ public class Person {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	 public static Comparator<Person> firstNameSorting = new Comparator<Person>() {
+	        public int compare(Person p1, Person p2)
+	        {
+	            String fname1 = p1.getFirstName();
+	            String fname2 = p2.getFirstName();
+	            // ascending order
+	            return fname1.compareTo(fname2);
+	        }
+	    };
 
 	public String toString() {
 		return "Contact{" + "FirstName = " + firstName + "; , Lastname = " + lastName + "; , Addrss = " + address
