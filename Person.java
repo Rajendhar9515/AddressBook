@@ -134,9 +134,14 @@ public class Person {
 
 
 	public String toString() {
-		return "Contact{" + "FirstName = " + firstName + "; , Lastname = " + lastName + "; , Addrss = " + address
-				+ "; , City = " + city + "; , State =" + state + "; , zip=" + zip + "; , PhoneNumber=" + phoneNumber
-				+ "; , Email=" + email + '}';
+		return "Contact{" + "FirstName = " + firstName + "; , "
+						+ "Lastname = " + lastName + "; , "
+						+ "Addrss = " + address
+						+ "; , City = " + city + "; , "
+						+ "State =" + state + "; , "
+						+ "zip=" + zip + "; , "
+						+ "PhoneNumber=" + phoneNumber
+						+ "; , Email=" + email + '}';
 
 	}
 

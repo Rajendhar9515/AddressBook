@@ -6,7 +6,7 @@ public class AddressBook {
     public static void main(String[] args) throws AddressBookException {
         int choice,i=0;
         Hashtable<String,String> my_dict =new  Hashtable<String,String>();
-        final Helper help = new Helper();
+        final AddressBooKService help = new AddressBooKService();
         while(i==0)
         {
             System.out.println("--- Address Book Management ---\n");
