@@ -3,7 +3,7 @@ package com.bridgelabz.addressbook;
 import java.util.Hashtable;
 
 public class AddressBook {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws AddressBookException {
         int choice,i=0;
         Hashtable<String,String> my_dict =new  Hashtable<String,String>();
         final Helper help = new Helper();
@@ -15,8 +15,9 @@ public class AddressBook {
             System.out.println("2: Display Records     ");
             System.out.println("3: Edit Contact		   ");
             System.out.println("4: Delete Contact	   ");
-            System.out.println("5: Exit		       \n");
-			System.out.println(" -----------------------");
+            System.out.println("5: Sort	   ");
+            System.out.println("6: Search	   ");
+            System.out.println("7: Exit		       \n");
             System.out.println("--- Enter Your Choice ---");
             choice = InputUtil.getIntValue();
             switch(choice)
@@ -36,7 +37,10 @@ public class AddressBook {
                 case 5 :
                     help.sortRecords();
                     break;
-                case 6 :
+                case 6:
+                    help.searchInRecords();
+                    break;
+                case 7 :
                     i=1;
                     break;
                 default :
